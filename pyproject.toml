@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "nex"
+dynamic = ["version"]
+description = "Nex is a lightweight version control system built from scratch in Python. It aims to recreate the core concepts behind Git while providing a hands-on way to understand how version control works internally."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.13"
+authors = [
+    { name = "Mohd Saad Ansari", email = "ansari.mohdsaad25@gmail.com" }
+]
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
+[project.scripts]
+nex = "nex.main:main"

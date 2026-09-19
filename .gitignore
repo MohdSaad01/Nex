@@ -1,0 +1,18 @@
+# IDE
+.idea/
+
+# Virtual Enviroments
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Generated Python packaging metadata
+*.egg-info/
+
+# Ignore local testing and scratchpads
+sandbox/
+
+# Generated Nex repository metadata
+.nex/
