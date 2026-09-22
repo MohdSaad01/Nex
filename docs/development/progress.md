@@ -10,6 +10,8 @@ This is a concise implementation record, and a full implementation log. Each ent
 - Investigated `pathlib` for filesystem operations and studied Git's repository initialization structure.
 - Designed the initial `.nex/` repository structure and started implementing `nex init`.
 
-# M2 - `nex status`
+# M2 - `nex add`
 
--- To Be Implemented.
+- Implement efficient recursive file existence check
+- While implementing `nex add` i also defined the nex ignore system.
+- More to be implemented

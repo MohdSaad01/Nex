@@ -1,0 +1,21 @@
+# This file defines the files and directories that Nex should ignore.
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+.venv/
+
+# IDE
+.idea/
+
+# Environment / local configuration
+.env
+
+# Local testing and scratchpads
+sandbox/
+
+# Generated Nex repository metadata
+.nex/

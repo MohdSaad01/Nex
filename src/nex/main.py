@@ -9,6 +9,7 @@ def main():
 
         kwargs = vars(args).copy()
         del kwargs["func"]
+        del kwargs["command"]
 
         func(**kwargs)
 

@@ -1,8 +1,12 @@
 # IDE
 .idea/
 
-# Virtual Enviroments
+# Virtual Environments
 .venv/
+
+# Environment variables / local secrets
+.env
+.env.*
 
 # Python cache
 __pycache__/
@@ -11,7 +15,20 @@ __pycache__/
 # Generated Python packaging metadata
 *.egg-info/
 
-# Ignore local testing and scratchpads
+# Build artifacts
+dist/
+build/
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Tool caches
+.mypy_cache/
+.ruff_cache/
+
+# Local testing and scratchpads
 sandbox/
 
 # Generated Nex repository metadata
