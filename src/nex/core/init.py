@@ -58,4 +58,4 @@ def initialize_repo(directory_path):
 
     #index
     index_path = directory_path / "index"
-    index_path.touch()
+    index_path.write_text("{}")
