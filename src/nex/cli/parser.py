@@ -1,6 +1,7 @@
 import argparse
 from nex.core.init import initialize
 from nex.core.add import adjoin
+from nex.core.commit import document
 
 
 def create_parser():
@@ -25,6 +26,12 @@ def create_parser():
     add_subparser.add_argument(
         "filename", type = str
     )
-    add_subparser.set_defaults(func=adjoin)
+    add_subparser.set_defaults(func = adjoin)
+
+    # commit subparser
+    commit_subparser = subparser.add_parser(
+        "commit", help = "Record changes to the repository"
+    )
+    commit_subparser.set_defaults(func = document)
 
     return parser

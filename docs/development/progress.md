@@ -15,4 +15,8 @@ This is a concise implementation record, and a full implementation log. Each ent
 - Implement efficient recursive file existence check
 - While implementing `nex add` i also defined the nex ignore system.
 - Added file hashing using sha256 and also index based object tracking.
+
+
+# M3 - `nex commit`
+- Initialized the function
 - More to be implemented
