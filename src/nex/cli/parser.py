@@ -32,6 +32,9 @@ def create_parser():
     commit_subparser = subparser.add_parser(
         "commit", help = "Record changes to the repository"
     )
+    commit_subparser.add_argument(
+        "-m", dest="message"
+    )
     commit_subparser.set_defaults(func = document)
 
     return parser

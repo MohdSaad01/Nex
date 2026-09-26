@@ -1,2 +1,2 @@
-def document():
-    print("Commit Working")
+def document(message, **kwargs):
+    print(f"{message}")
