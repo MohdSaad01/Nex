@@ -10,13 +10,19 @@ This is a concise implementation record, and a full implementation log. Each ent
 - Investigated `pathlib` for filesystem operations and studied Git's repository initialization structure.
 - Designed the initial `.nex/` repository structure and started implementing `nex init`.
 
-# M2 - `nex add`
+# M2 — `nex add`
 
-- Implement efficient recursive file existence check
-- While implementing `nex add` i also defined the nex ignore system.
-- Added file hashing using sha256 and also index based object tracking.
+- Implemented recursive file existence checking.
+- Defined the initial `.nexignore` system.
+- Added file hashing using SHA-256.
+- Added index-based object tracking.
+
+# M3 — `nex commit`
+
+- Initialized the commit functionality.
+- Implemented `nex commit`.
+- Added commit object storage and HEAD tracking.
 
 
-# M3 - `nex commit`
-- Initialized the function
-- More to be implemented
+# M4 - `nex status`
+- To be implemented
