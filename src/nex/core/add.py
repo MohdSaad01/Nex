@@ -4,18 +4,19 @@ import hashlib
 
 def adjoin(filename, **kwargs):
 
-    search_dir = Path("../../../")
+    search_dir = Path("C:/Zeus/Nex/")
 
-    file_exits = any(search_dir.rglob(filename))
+    search_results = search_dir.rglob(filename)
+    file_path = next(search_results, None)
 
-    if file_exits:
+    if file_path is not None:
         if check_ignore(filename):
-            print("Hashing File...")
-            hash_file(filename)
+            hash_file(file_path)
+            print(f"Added '{filename}' to staging area")
         else:
-            print("File in .nexignore")
+            print(f"'{filename}' is ignored by .nexignore")
     else:
-        print("File doesn't exits")
+        print(f"fatal: pathspec '{filename}' did not match any files")
 
 def check_ignore(filename):
     ignore = ".nexignore"
@@ -42,7 +43,7 @@ def hash_file(filename):
     remainder = hash_value[2:]
 
     object_dir = Path(".nex") / "objects" / prefix
-    object_dir.mkdir()
+    object_dir.mkdir(parents=True, exist_ok=True)
 
     object_file = object_dir / remainder
     object_file.write_bytes(data)

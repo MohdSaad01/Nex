@@ -6,6 +6,7 @@ def document(message, **kwargs):
     msg = read_index(message)
     hash_value = hash_message(msg)
     update_head(hash_value)
+    user_message(hash_value,message)
 
 def read_index(message):
     path = Path(".nex/index")
@@ -36,3 +37,7 @@ def update_head(hash_value):
     head = Path(".nex/HEAD")
     head.write_text(hash_value)
 
+
+def user_message(hash_value, message):
+    short_hash = hash_value[:7]
+    print(f"[commit {short_hash}...] {message}")
