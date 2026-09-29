@@ -57,5 +57,7 @@ def update_index(filename, hash_value):
     if index_path.exists():
         index = json.loads(index_path.read_text())
 
-    index[filename] = hash_value
+    relative_path = Path(filename).relative_to(Path.cwd())
+
+    index[str(relative_path)] = hash_value
     index_path.write_text(json.dumps(index, indent = 2))

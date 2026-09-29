@@ -10,8 +10,9 @@ def document(message, **kwargs):
 
 def read_index(message):
     path = Path(".nex/index")
-    data = path.read_text().replace("\n", "")
-    msg = {"message":message,"files":data}
+    data = path.read_text()
+    files = json.loads(data)
+    msg = {"message":message,"files":files}
 
     return msg
 
@@ -40,4 +41,4 @@ def update_head(hash_value):
 
 def user_message(hash_value, message):
     short_hash = hash_value[:7]
-    print(f"[commit {short_hash}...] {message}")
+    print(f"[commit main {short_hash}...] {message}")

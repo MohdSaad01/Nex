@@ -25,4 +25,5 @@ This is a concise implementation record, and a full implementation log. Each ent
 
 
 # M4 - `nex status`
+- Collected paths from HEAD and index.
 - To be implemented

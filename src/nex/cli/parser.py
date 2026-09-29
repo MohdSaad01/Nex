@@ -2,6 +2,7 @@ import argparse
 from nex.core.init import initialize
 from nex.core.add import adjoin
 from nex.core.commit import document
+from nex.core.status import status
 
 
 def create_parser():
@@ -36,5 +37,11 @@ def create_parser():
         "-m", dest="message"
     )
     commit_subparser.set_defaults(func = document)
+
+    # status command
+    status_subparser = subparser.add_parser(
+        "status", help="Show the working tree status"
+    )
+    status_subparser.set_defaults(func=status)
 
     return parser
