@@ -4,7 +4,7 @@
 
 ## Project status
 
-Nex is under active, incremental development.
+Nex has been dropped out of active development.
 
 ### Currently implemented
 
